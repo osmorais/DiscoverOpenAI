@@ -1,17 +1,14 @@
 from openai import OpenAI
 import os
 
-client = OpenAI()
+from dotenv import load_dotenv
+
+load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 message = """
-        Sou uma voz gerada por IA, e recitarei um poema:
-        
-        De tudo, ao meu amor serei atento
-        Antes, e com tal zelo, e sempre, e tanto
-        Que mesmo em face do maior encanto
-        Dele se encante mais meu pensamento.
+        Olá, tudo bem? Gostaria de ouvir minha mensagem em voz alta.
     """
 
 
